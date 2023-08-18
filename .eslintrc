@@ -1,0 +1,99 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.eslint.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "config": "./tsconfig.eslint.json"
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es2021": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react/require-default-props": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          { "pattern": "@/**", "group": "internal" }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "arrow-body-style": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "@typescript-eslint/no-floating-promises": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "import/no-cycle": "error",
+    "consistent-return": "error",
+    "no-mixed-operators": "error",
+    "no-param-reassign": ["error", { "props": false }],
+    "react-hooks/exhaustive-deps": "error",
+    "react/no-did-update-set-state": "error",
+    "react/static-property-placement": "error",
+    "react/no-unused-state": "error",
+    "react/no-unescaped-entities": "error",
+    "no-async-promise-executor": "error",
+    "lines-between-class-members": "off",
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-props-no-spreading": "off",
+    "default-param-last": "off",
+    "object-curly-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-import-module-exports": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["./localConfiguration"]
+      }
+    ]
+  }
+}

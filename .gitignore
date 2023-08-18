@@ -1,0 +1,17 @@
+node_modules
+build
+deploy
+.idea
+.next
+.vscode
+coverage
+.DS_Store
+manifest.json
+aws.json
+index.local.html
+npm-debug.log
+tests/build
+test-report.xml
+.eslintcache
+package-lock.json
+*.log
